@@ -8,19 +8,22 @@
         <v-navigation-drawer v-model="drawer" absolute temporary>
             <v-list nav dense>
                 <v-list-item-group v-model="group" active-class="green--text text--lighten-2">
-                    <v-list-item>
-                        <v-list-item-icon>
-                            <v-icon>mdi-home</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>Início</v-list-item-title>
-                    </v-list-item>
-
-                    <v-list-item>
-                        <v-list-item-icon>
-                            <v-icon>mdi-soccer</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-title>Classificação</v-list-item-title>
-                    </v-list-item>
+                    <router-link to="/">
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-home</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-title>Início</v-list-item-title>
+                        </v-list-item>
+                    </router-link>
+                    <router-link to="/classificacao">
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-soccer</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-title>Classificação</v-list-item-title>
+                        </v-list-item>
+                    </router-link>
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>
@@ -37,4 +40,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.app-top-bar a {
+    color: white !important;
+    text-decoration: none;
+}
+</style>
